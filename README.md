@@ -1,8 +1,8 @@
 # vscan
-Usage: vscan [path]
+Usage: vscan [path] <br/>
 If path is included, will only scan specified directory. Otherwise, menu will be brought up.
 
-Usage: vscan stop 
+Usage: vscan stop <br/>
 Stops all scan processes
 
 # Prerequesites
