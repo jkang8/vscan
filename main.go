@@ -46,7 +46,7 @@ func main() {
   } else if len(os.Args) == 2 {
     // Specified path to scan
     args := os.Args
-    if args[1] == "stop" {
+    if args[1] == "--stop" {
         commandHelpers.KillBackgroundScan()
     } else {
       scanArgs := []string{"clamscan", "-r", "--bell", "-i", "&", args[1]}
