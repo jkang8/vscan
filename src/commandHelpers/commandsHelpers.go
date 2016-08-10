@@ -6,6 +6,7 @@ import (
   "os"
 )
 
+// Kill ongoing clamscan processes.
 func KillBackgroundScan() {
   killCmd := "kill $(ps aux | grep '[c]lamscan' | awk '{print $2}')"
   cmd:= exec.Command("bash", "-c", killCmd)
@@ -13,6 +14,7 @@ func KillBackgroundScan() {
   cmd.Start()
 }
 
+// Program will wait for command to run.
 func RunCmd(args []string) {
   cmdName := args[0]
   cmd := exec.Command(cmdName, args...)
@@ -21,6 +23,7 @@ func RunCmd(args []string) {
   cmd.Run()
 }
 
+// Program will not wait for command to run before ending.
 func StartCmd(args[]string) {
   cmdName := args[0]
   cmd := exec.Command(cmdName, args...)

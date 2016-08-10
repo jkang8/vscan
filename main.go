@@ -6,6 +6,7 @@ import (
   "./src/commandHelpers"
 )
 
+// Give user option to run scan in program or in new process
 func backgroundPrompt(scanArgs []string) {
     var option string
     var args = scanArgs
